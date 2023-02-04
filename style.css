@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;701&family=Luckiest+Guy&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bitter', serif;
+    overflow: hidden;
+}
+
+.home {
+    background-image: url("./assets/zombie-shoot-background.png");
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game {
+    background-image: url("./assets/zombie-shoot-game-background.png");
+    background-size: 100% 100%;
+    cursor: url('https://img.informer.com/icons/png/32/113/113532.png') 16 16, crosshair;
+    height: 100vh;
+    width: 100vw;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 50vw;
+    min-width: 300px;
+}
+
+#button {
+    max-width: 220px;
+    height: 60px;
+    width: 40vw;
+    padding: 5px;
+    background-color: #7FD443;
+    border: 1px 0.9 black;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-size: 26px;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: rgb(102, 6, 22);
+}
+
+#buttons {
+    max-width: 220px;
+    height: 60px;
+    width: 40vw;
+    padding: 5px;
+    background-color: #7FD443;
+    border: 1px 0.9 black;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-size: 26px;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+#buttons:hover {
+    background-color: rgb(102, 6, 22);
+}
+
+#max-lives {
+    width: 100%;
+    height: 25px;
+    border-radius: 17px;
+    background-color: limegreen;
+    position: fixed;
+    bottom: 35px;
+    margin: 0 auto;
+}
+
+#lives {
+    z-index: 2;
+    width: 50%;
+    height: 25px;
+    border-radius: 17px;
+}
+
+#timer-box {
+    font-size: 2em;
+    padding: 20px;
+    z-index: 1;
+    position: absolute;
+    right: 50px;
+}
+
+.zombie-image {
+    position: absolute;
+    bottom: -100px;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: flying 5s infinite ease-in;
+    z-index: 2;
+    width: 30vw;
+    height: 30vw;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+h2 {
+    font-size: 36px;
+    color: white;
+}
+
+.win-bg,
+.gameover-bg {
+    background-image: url(./assets/zombie-shoot-background.png);
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes flying {
+    0% {
+        bottom: -100px;
+    }
+
+    100% {
+        bottom: 1080px;
+    }
+}
